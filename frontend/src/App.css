@@ -1,0 +1,111 @@
+/* ---- Reset & base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* ---- App layout ---- */
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e2d96b;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #a0a0c0;
+  margin-top: 0.3rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ---- Canvas ---- */
+.canvas-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-wrapper canvas {
+  display: block;
+}
+
+/* ---- Control panel ---- */
+.control-panel {
+  flex: 1 1 280px;
+  background: #16213e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.control-panel h2 {
+  font-size: 1.1rem;
+  color: #e2d96b;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #2a2a4a;
+  padding-bottom: 0.5rem;
+}
+
+.slider-row {
+  margin-bottom: 1.1rem;
+}
+
+.slider-row label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #c0c0d8;
+  margin-bottom: 0.35rem;
+}
+
+.slider-row .value {
+  font-weight: 600;
+  color: #e2d96b;
+  min-width: 4rem;
+  text-align: right;
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: #e2d96b;
+  cursor: pointer;
+}
+
+/* ---- Loading ---- */
+.loading {
+  color: #a0a0c0;
+  text-align: center;
+  font-size: 1rem;
+  padding: 3rem;
+}
