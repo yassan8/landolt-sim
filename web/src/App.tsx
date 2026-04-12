@@ -211,7 +211,7 @@ export default function App() {
           <p className="hero-copy">
             OSA Zernike 収差、Styles-Crawford 効果、FFT ベースの PSF、ランドルト環をブラウザ上でリアルタイム合成する網膜像シミュレーター。
           </p>
-          <p className="hero-disclaimer">⚠️ 本シミュレーターはエンターテインメント目的のデモです。医療診断・視力検査の代替として使用しないでください。</p>
+          <p className="hero-disclaimer">⚠️ 本ツールは、ゼルニケ多項式および波面収差論に基づく工学的な計算結果を表示するシミュレーターです。医学的な診断を目的としたものではなく、眼科受診や眼鏡処方の代わりになるものではありません。</p>
         </div>
       </header>
 
