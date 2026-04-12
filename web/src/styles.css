@@ -75,7 +75,7 @@ select {
   color: #b54708;
   font-size: 0.85rem;
   line-height: 1.5;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hero-stats {
