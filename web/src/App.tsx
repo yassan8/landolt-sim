@@ -306,7 +306,7 @@ export default function App() {
           <div className="panel-header-row viewer-header">
             <div>
               <h2>Retinal Image Viewer</h2>
-              <p>波面収差、PSF、JIS ランドルト環、網膜像を同一条件で並列表示します。</p>
+              <p>波面収差、PSF、ランドルト環、網膜像を同一条件で並列表示します。</p>
             </div>
           </div>
 
