@@ -134,6 +134,7 @@ export default function App() {
   const [result, setResult] = useState<SimulationResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(true);
+  const [showAcuityLabels, setShowAcuityLabels] = useState(true);
 
   useEffect(() => {
     setSimulationPhase("interactive");
@@ -308,6 +309,14 @@ export default function App() {
               <h2>Retinal Image Viewer</h2>
               <p>波面収差、PSF、ランドルト環、網膜像を同一条件で並列表示します。</p>
             </div>
+            <label className="toggle-row" style={{ gap: "0.5rem", cursor: "pointer" }}>
+              <span style={{ fontSize: "0.85rem" }}>視力値を表示</span>
+              <input
+                type="checkbox"
+                checked={showAcuityLabels}
+                onChange={(event) => setShowAcuityLabels(event.target.checked)}
+              />
+            </label>
           </div>
 
           {result ? (
@@ -335,7 +344,7 @@ export default function App() {
                 yRange={[result.chart.y[0], result.chart.y[result.chart.y.length - 1]]}
                 placements={result.chart.placements}
                 axisUnit="arcmin"
-                annotations={chartAnnotations}
+                annotations={showAcuityLabels ? chartAnnotations : []}
               />
               <PlotPanel
                 title="Retinal Image Simulation"
@@ -348,7 +357,7 @@ export default function App() {
                 ]}
                 smooth
                 axisUnit="arcmin"
-                annotations={chartAnnotations}
+                annotations={showAcuityLabels ? chartAnnotations : []}
                 xRange={[result.chart.x[0], result.chart.x[result.chart.x.length - 1]]}
                 yRange={[result.chart.y[0], result.chart.y[result.chart.y.length - 1]]}
               />
